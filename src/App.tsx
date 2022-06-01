@@ -13,7 +13,7 @@ import {
   RedGradient,
   SecondaryTextColors,
   StateColors,
-  StateEmphasisColors,
+  StateSoftColors,
   TerciaryTextColors,
 } from './tokens/colors';
 import Card from './components/Card';
@@ -63,7 +63,7 @@ export default function App() {
           </div>
           <div className="mt-4 space-y-4">
             <StateColors />
-            <StateEmphasisColors />
+            <StateSoftColors />
           </div>
         </div>
 
@@ -95,7 +95,7 @@ export default function App() {
           </div>
           <div className="mt-6">
             <Label>Label</Label>
-            <Label>I am a label</Label>
+            <Label>{text}</Label>
           </div>
           <div className="mt-6">
             <Label>Strong</Label>
@@ -258,6 +258,58 @@ export default function App() {
           <H2 className="mb-4">Tabs</H2>
           <Label>Navigation</Label>
           <Tabs />
+        </div>
+
+        <div className="py-10">
+          <H2>Playground</H2>
+          <div className="mt-4">
+            <Label className="mb-2">Playground subtly gridded space in which to render UI</Label>
+            <Playground>
+              <div className="flex justify-start sm:block overflow-scroll sm:overflow-visible scroll-p-8">
+                <div className="flex items-center justify-around gap-6 sm:gap-4 font-mono font-bold shrink-0 p-8">
+                  <div className="flex flex-col items-center shrink-0">
+                    <p className="font-medium text-sm text-slate-500 font-mono text-center mb-3 dark:text-slate-400">
+                      backdrop-opacity-10
+                    </p>
+                    <div className="relative">
+                      <div className="absolute inset-6 backdrop-opacity-10 backdrop-invert h-20 w-20 bg-white/30"></div>
+                      <img
+                        className="w-32 h-32 object-cover rounded-lg shadow-xl"
+                        src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=320&amp;h=320&amp;q=80"
+                      />
+                      <div className="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center shrink-0">
+                    <p className="font-medium text-sm text-slate-500 font-mono text-center mb-3 dark:text-slate-400">
+                      backdrop-opacity-60
+                    </p>
+                    <div className="relative">
+                      <div className="absolute inset-6 backdrop-opacity-60 backdrop-invert h-20 w-20 bg-white/30"></div>
+                      <img
+                        className="w-32 h-32 object-cover rounded-lg shadow-xl"
+                        src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=320&amp;h=320&amp;q=80"
+                      />
+                      <div className="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center shrink-0">
+                    <p className="font-medium text-sm text-slate-500 font-mono text-center mb-3 dark:text-slate-400">
+                      backdrop-opacity-95
+                    </p>
+                    <div className="relative">
+                      <div className="absolute inset-6 backdrop-opacity-95 backdrop-invert h-20 w-20 bg-white/30"></div>
+                      <img
+                        className="w-32 h-32 object-cover rounded-lg shadow-xl"
+                        src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=320&amp;h=320&amp;q=80"
+                      />
+                      <div className="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Playground>
+          </div>
         </div>
 
         <div className="py-10">

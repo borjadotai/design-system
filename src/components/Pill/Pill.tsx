@@ -7,13 +7,13 @@ const sharedStyles = 'px-2 py-1 rounded-md text-sm font-medium h-fit w-fit';
 const generateColorStyles = (color: Colors) => {
   switch (color) {
     case 'info':
-      return 'text-info dark:text-dark-info bg-info-emphasis dark:bg-dark-info-emphasis';
+      return 'text-info dark:text-dark-info bg-info-soft dark:bg-dark-info-soft';
     case 'success':
-      return 'text-success dark:text-dark-success bg-success-emphasis dark:bg-dark-success-emphasis';
+      return 'text-success dark:text-dark-success bg-success-soft dark:bg-dark-success-soft';
     case 'warning':
-      return 'text-warning dark:text-dark-warning bg-warning-emphasis dark:bg-dark-warning-emphasis';
+      return 'text-warning dark:text-dark-warning bg-warning-soft dark:bg-dark-warning-soft';
     case 'danger':
-      return 'text-danger dark:text-dark-danger bg-danger-emphasis dark:bg-dark-danger-emphasis';
+      return 'text-danger dark:text-dark-danger bg-danger-soft dark:bg-dark-danger-soft';
   }
 };
 

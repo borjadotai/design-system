@@ -3,7 +3,7 @@ import { CardProps } from './Card.types';
 export default function Card({ header, transparent, depth, children }: CardProps) {
   const shared = `${
     transparent ? 'bg-transparent' : 'bg-white dark:bg-gray-88'
-  } rounded-md border border-emphasis dark:border-dark-emphasis`;
+  } rounded-md border border-soft dark:border-dark-soft`;
 
   const shadow =
     depth === 1
@@ -19,7 +19,7 @@ export default function Card({ header, transparent, depth, children }: CardProps
   if (header)
     return (
       <div className={`${shared} ${shadow}`}>
-        <div className="border-b border-emphasis dark:border-dark-emphasis px-4 py-2">{header}</div>
+        <div className="border-b border-soft dark:border-dark-soft px-4 py-2">{header}</div>
         <div className="p-4">{children}</div>
       </div>
     );

@@ -1,4 +1,4 @@
-const colorSize = 'w-8 h-8 rounded-md border border-emphasis dark:border-dark-emphasis';
+const colorSize = 'w-8 h-8 rounded-md border border-soft dark:border-dark-soft';
 import { Label } from '../components/Typography';
 
 const gradientShared = 'flex space-x-1 flex-wrap';
@@ -27,8 +27,8 @@ export const BorderColors = () => (
   <div className="flex flex-col justify-start">
     <Label>Border</Label>
     <div className={gradientShared}>
-      <div className={`${colorSize} bg-emphasis`} />
-      <div className={`${colorSize} bg-dark-emphasis`} />
+      <div className={`${colorSize} bg-soft`} />
+      <div className={`${colorSize} bg-dark-soft`} />
     </div>
   </div>
 );
@@ -106,34 +106,34 @@ export const StateColors = () => (
   </div>
 );
 
-export const StateEmphasisColors = () => (
+export const StateSoftColors = () => (
   <div className="flex space-x-6">
     <div>
       <Label>Soft [S]</Label>
       <div className={gradientShared}>
-        <div className={`${colorSize} bg-success-emphasis`} />
-        <div className={`${colorSize} bg-dark-success-emphasis`} />
+        <div className={`${colorSize} bg-success-soft`} />
+        <div className={`${colorSize} bg-dark-success-soft`} />
       </div>
     </div>
     <div>
       <Label>Soft [D]</Label>
       <div className={gradientShared}>
-        <div className={`${colorSize} bg-danger-emphasis`} />
-        <div className={`${colorSize} bg-dark-danger-emphasis`} />
+        <div className={`${colorSize} bg-danger-soft`} />
+        <div className={`${colorSize} bg-dark-danger-soft`} />
       </div>
     </div>
     <div>
       <Label>Soft [W]</Label>
       <div className={gradientShared}>
-        <div className={`${colorSize} bg-warning-emphasis`} />
-        <div className={`${colorSize} bg-dark-warning-emphasis`} />
+        <div className={`${colorSize} bg-warning-soft`} />
+        <div className={`${colorSize} bg-dark-warning-soft`} />
       </div>
     </div>
     <div>
       <Label>Soft [I]</Label>
       <div className={gradientShared}>
-        <div className={`${colorSize} bg-info-emphasis`} />
-        <div className={`${colorSize} bg-dark-info-emphasis`} />
+        <div className={`${colorSize} bg-info-soft`} />
+        <div className={`${colorSize} bg-dark-info-soft`} />
       </div>
     </div>
   </div>

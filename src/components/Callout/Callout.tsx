@@ -7,8 +7,8 @@ export default function Callout(props: CalloutProps) {
 
   const colorStyles =
     variant === 'info'
-      ? 'bg-info-emphasis border-brand dark:border-dark-brand dark:bg-dark-info-emphasis'
-      : 'bg-danger-emphasis border-danger dark:border-dark-danger dark:bg-dark-danger-emphasis';
+      ? 'bg-info-soft border-brand dark:border-dark-brand dark:bg-dark-info-soft'
+      : 'bg-danger-soft border-danger dark:border-dark-danger dark:bg-dark-danger-soft';
   const labelStyles = variant === 'info' ? 'bg-brand dark:bg-dark-brand' : 'bg-danger dark:bg-dark-danger';
   const iconStyles = variant === 'info' ? 'bg-brand dark:bg-dark-brand' : 'bg-danger dark:bg-dark-danger';
 

@@ -1,204 +1,43 @@
+@import './styles/index.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  /* Grays */
-  --base-hue-gray: 223;
-  --base-gray: var(--base-hue-gray), 15%;
-  --gray-2: hsl(var(--base-gray), 98%);
-  --gray-5: hsl(var(--base-gray), 95%);
-  --gray-5: hsl(var(--base-gray), 95%);
-  --gray-10: hsl(var(--base-gray), 90%);
-  --gray-15: hsl(var(--base-gray), 85%);
-  --gray-20: hsl(var(--base-gray), 80%);
-  --gray-25: hsl(var(--base-gray), 75%);
-  --gray-30: hsl(var(--base-gray), 70%);
-  --gray-35: hsl(var(--base-gray), 65%);
-  --gray-40: hsl(var(--base-gray), 60%);
-  --gray-45: hsl(var(--base-gray), 55%);
-  --gray-50: hsl(var(--base-gray), 50%);
-  --gray-55: hsl(var(--base-gray), 45%);
-  --gray-60: hsl(var(--base-gray), 40%);
-  --gray-65: hsl(var(--base-gray), 35%);
-  --gray-70: hsl(var(--base-gray), 30%);
-  --gray-75: hsl(var(--base-gray), 25%);
-  --gray-80: hsl(var(--base-gray), 20%);
-  --gray-85: hsl(var(--base-gray), 15%);
-  --gray-88: hsl(var(--base-gray), 12.5%);
-  --gray-90: hsl(var(--base-gray), 10%);
-  --gray-95: hsl(var(--base-gray), 5%);
-  --gray-100: hsl(var(--base-gray), 0%);
-  /* Blue */
-  --base-hue: 222;
-  --base-saturation: 89;
-  --base-blue: var(--base-hue), calc(var(--base-saturation) * 1%);
-  --blue-2: hsl(var(--base-blue), 98%);
-  --blue-5: hsl(var(--base-blue), 95%);
-  --blue-5: hsl(var(--base-blue), 95%);
-  --blue-10: hsl(var(--base-blue), 90%);
-  --blue-15: hsl(var(--base-blue), 85%);
-  --blue-20: hsl(var(--base-blue), 80%);
-  --blue-25: hsl(var(--base-blue), 75%);
-  --blue-30: hsl(var(--base-blue), 70%);
-  --blue-35: hsl(var(--base-blue), 65%);
-  --blue-40: hsl(var(--base-blue), 60%);
-  --blue-45: hsl(var(--base-blue), 55%);
-  --blue-50: hsl(var(--base-blue), 50%);
-  --blue-55: hsl(var(--base-blue), 45%);
-  --blue-60: hsl(var(--base-blue), 40%);
-  --blue-65: hsl(var(--base-blue), 35%);
-  --blue-70: hsl(var(--base-blue), 30%);
-  --blue-75: hsl(var(--base-blue), 25%);
-  --blue-80: hsl(var(--base-blue), 20%);
-  --blue-85: hsl(var(--base-blue), 15%);
-  --blue-90: hsl(var(--base-blue), 10%);
-  --blue-95: hsl(var(--base-blue), 5%);
-  --blue-100: hsl(var(--base-blue), 0%);
-  /* Red */
-  --base-red: 0, 95%;
-  --red-2: hsl(var(--base-red), 98%);
-  --red-5: hsl(var(--base-red), 95%);
-  --red-5: hsl(var(--base-red), 95%);
-  --red-10: hsl(var(--base-red), 90%);
-  --red-15: hsl(var(--base-red), 85%);
-  --red-20: hsl(var(--base-red), 80%);
-  --red-25: hsl(var(--base-red), 75%);
-  --red-30: hsl(var(--base-red), 70%);
-  --red-35: hsl(var(--base-red), 65%);
-  --red-40: hsl(var(--base-red), 60%);
-  --red-45: hsl(var(--base-red), 55%);
-  --red-50: hsl(var(--base-red), 50%);
-  --red-55: hsl(var(--base-red), 45%);
-  --red-60: hsl(var(--base-red), 40%);
-  --red-65: hsl(var(--base-red), 35%);
-  --red-70: hsl(var(--base-red), 30%);
-  --red-75: hsl(var(--base-red), 25%);
-  --red-80: hsl(var(--base-red), 20%);
-  --red-85: hsl(var(--base-red), 15%);
-  --red-90: hsl(var(--base-red), 10%);
-  --red-95: hsl(var(--base-red), 5%);
-  --red-100: hsl(var(--base-red), 0%);
-  /* Orange */
-  --base-orange: 42, 100%;
-  --orange-2: hsl(var(--base-orange), 98%);
-  --orange-5: hsl(var(--base-orange), 95%);
-  --orange-5: hsl(var(--base-orange), 95%);
-  --orange-10: hsl(var(--base-orange), 90%);
-  --orange-15: hsl(var(--base-orange), 85%);
-  --orange-20: hsl(var(--base-orange), 80%);
-  --orange-25: hsl(var(--base-orange), 75%);
-  --orange-30: hsl(var(--base-orange), 70%);
-  --orange-35: hsl(var(--base-orange), 65%);
-  --orange-40: hsl(var(--base-orange), 60%);
-  --orange-45: hsl(var(--base-orange), 55%);
-  --orange-50: hsl(var(--base-orange), 50%);
-  --orange-55: hsl(var(--base-orange), 45%);
-  --orange-60: hsl(var(--base-orange), 40%);
-  --orange-65: hsl(var(--base-orange), 35%);
-  --orange-70: hsl(var(--base-orange), 30%);
-  --orange-75: hsl(var(--base-orange), 25%);
-  --orange-80: hsl(var(--base-orange), 20%);
-  --orange-85: hsl(var(--base-orange), 15%);
-  --orange-90: hsl(var(--base-orange), 10%);
-  --orange-95: hsl(var(--base-orange), 5%);
-  --orange-100: hsl(var(--base-orange), 0%);
-  /* Green */
-  --base-green: 160, 100%;
-  --green-2: hsl(var(--base-green), 98%);
-  --green-5: hsl(var(--base-green), 95%);
-  --green-5: hsl(var(--base-green), 95%);
-  --green-10: hsl(var(--base-green), 90%);
-  --green-15: hsl(var(--base-green), 85%);
-  --green-20: hsl(var(--base-green), 80%);
-  --green-25: hsl(var(--base-green), 75%);
-  --green-30: hsl(var(--base-green), 70%);
-  --green-35: hsl(var(--base-green), 65%);
-  --green-40: hsl(var(--base-green), 60%);
-  --green-45: hsl(var(--base-green), 55%);
-  --green-50: hsl(var(--base-green), 50%);
-  --green-55: hsl(var(--base-green), 45%);
-  --green-60: hsl(var(--base-green), 40%);
-  --green-65: hsl(var(--base-green), 35%);
-  --green-70: hsl(var(--base-green), 30%);
-  --green-75: hsl(var(--base-green), 25%);
-  --green-80: hsl(var(--base-green), 20%);
-  --green-85: hsl(var(--base-green), 15%);
-  --green-90: hsl(var(--base-green), 10%);
-  --green-95: hsl(var(--base-green), 5%);
-  --green-100: hsl(var(--base-green), 0%);
-  /* Pink */
-  --base-pink: 330, 98%;
-  --pink-2: hsl(var(--base-pink), 98%);
-  --pink-5: hsl(var(--base-pink), 95%);
-  --pink-5: hsl(var(--base-pink), 95%);
-  --pink-10: hsl(var(--base-pink), 90%);
-  --pink-15: hsl(var(--base-pink), 85%);
-  --pink-20: hsl(var(--base-pink), 80%);
-  --pink-25: hsl(var(--base-pink), 75%);
-  --pink-30: hsl(var(--base-pink), 70%);
-  --pink-35: hsl(var(--base-pink), 65%);
-  --pink-40: hsl(var(--base-pink), 60%);
-  --pink-45: hsl(var(--base-pink), 55%);
-  --pink-50: hsl(var(--base-pink), 50%);
-  --pink-55: hsl(var(--base-pink), 45%);
-  --pink-60: hsl(var(--base-pink), 40%);
-  --pink-65: hsl(var(--base-pink), 35%);
-  --pink-70: hsl(var(--base-pink), 30%);
-  --pink-75: hsl(var(--base-pink), 25%);
-  --pink-80: hsl(var(--base-pink), 20%);
-  --pink-85: hsl(var(--base-pink), 15%);
-  --pink-90: hsl(var(--base-pink), 10%);
-  --pink-95: hsl(var(--base-pink), 5%);
-  --pink-100: hsl(var(--base-pink), 0%);
-
   /* Theme - Light */
   --light-brand: var(--blue-50);
-  --light-emphasis: var(--blue-5);
+  --light-soft: var(--blue-5);
   --light-background: var(--gray-2);
   --light-foreground: var(--gray-5);
   --light-text-primary: var(--blue-90);
   --light-text-secondary: var(--gray-55);
   --light-text-terciary: var(--gray-60);
   --light-info: var(--blue-60);
-  --light-info-emphasis: hsla(var(--base-blue), 80%, 20%);
+  --light-info-soft: hsla(var(--base-blue), 80%, 20%);
   --light-success: var(--green-75);
-  --light-success-emphasis: hsla(var(--base-green), 80%, 20%);
+  --light-success-soft: hsla(var(--base-green), 80%, 20%);
   --light-warning: var(--orange-75);
-  --light-warning-emphasis: hsla(var(--base-orange), 80%, 20%);
+  --light-warning-soft: hsla(var(--base-orange), 80%, 20%);
   --light-danger: var(--red-60);
-  --light-danger-emphasis: hsla(var(--base-red), 80%, 20%);
+  --light-danger-soft: hsla(var(--base-red), 80%, 20%);
 
   /* Theme - Dark */
   --dark-brand: var(--blue-35);
-  --dark-emphasis: var(--gray-75);
+  --dark-soft: var(--gray-75);
   --dark-background: var(--gray-90);
   --dark-foreground: var(--gray-85);
   --dark-text-primary: var(--blue-5);
   --dark-text-secondary: var(--gray-40);
   --dark-text-terciary: var(--gray-50);
   --dark-info: var(--blue-30);
-  --dark-info-emphasis: hsla(var(--base-blue), 50%, 20%);
+  --dark-info-soft: hsla(var(--base-blue), 50%, 20%);
   --dark-success: var(--green-55);
-  --dark-success-emphasis: hsla(var(--base-green), 50%, 20%);
+  --dark-success-soft: hsla(var(--base-green), 50%, 20%);
   --dark-warning: var(--orange-50);
-  --dark-warning-emphasis: hsla(var(--base-orange), 50%, 20%);
+  --dark-warning-soft: hsla(var(--base-orange), 50%, 20%);
   --dark-danger: var(--red-30);
-  --dark-danger-emphasis: hsla(var(--base-red), 50%, 20%);
-
-  /* Typography */
-  --font-fallback: -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
-    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  --font-display: Inter, var(--font-fallback);
-  --font-mono: 'Fira Code', monospace;
-  --font-numeric: 'Space Grotesk', var(--font-fallback);
-  --font-size-1: 14px;
-  --font-size-2: 0.875rem;
-  --font-size-3: 1rem;
-  --font-size-4: 1.125rem;
-  --font-size-5: 1.25rem;
-  --font-size-6: 1.5rem;
-  --font-size-7: 2rem;
+  --dark-danger-soft: hsla(var(--base-red), 50%, 20%);
 }
 
 html {
@@ -206,7 +45,7 @@ html {
 }
 
 ::selection {
-  @apply bg-emphasis dark:bg-indigo-700/10 text-brand dark:text-dark-brand;
+  @apply bg-soft dark:bg-indigo-700/10 text-brand dark:text-dark-brand;
 }
 
 ol li::marker {
